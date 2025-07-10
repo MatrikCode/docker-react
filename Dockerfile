@@ -10,4 +10,6 @@ RUN npm run build
 
 # nginx server
 FROM nginx
+# Works only with beanstalk!
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
